@@ -26,4 +26,5 @@ api.add_resource(Upload, '/upload')
 
 api.add_resource(Download, '/download')
 
-app.run(port=5050, debug=True)
+if __name__ == '__main__':
+	app.run(port=5050, debug=True)
