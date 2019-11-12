@@ -70,3 +70,9 @@ class Download(Resource):
         except:
             return {'message':'File not found!'}, 404
 
+class Test(Resource):
+    def get(self):
+        try:
+            return {'message': 'The test is succesfull!'}, 200
+        except:
+            return {'message': 'Error loading content!'}, 404

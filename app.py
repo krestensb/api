@@ -7,7 +7,7 @@ from flask_cors import CORS
 
 from datetime import timedelta
 from resources.user import UserRegister, User
-from resources.bilag import BilagList, CreateBilag, UserBilag, Upload, Download
+from resources.bilag import BilagList, CreateBilag, UserBilag, Upload, Download, Test
 
 app = Flask(__name__)
 CORS(app)
@@ -27,6 +27,8 @@ api.add_resource(UserBilag, '/user_bilag')
 api.add_resource(Upload, '/upload')
 
 api.add_resource(Download, '/download')
+
+api.add_resource(Test, '/test')
 
 if __name__ == '__main__':
 	app.run(port=5050, debug=True)
