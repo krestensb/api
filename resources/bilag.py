@@ -73,6 +73,12 @@ class Download(Resource):
 class Test(Resource):
     def get(self):
         try:
-            return {'message': 'The test is succesfull!'}, 200
+            return {'message': 'The GET test was succesfull!'}, 200
         except:
-            return {'message': 'Error loading content!'}, 404
+            return {'message': 'Error loading content with GET!'}, 404
+
+    def post(self):
+        try:
+            return {'message1': 'The POST test was succesfull!', 'message2':'That was plessant!'}, 200
+        except:
+            return {'message': 'Error loading content with POST!'}, 404
