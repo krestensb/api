@@ -3,12 +3,14 @@ from flask import Flask,jsonify,request,send_file
 from flask_restful import Api
 from flask_jwt import JWT, jwt_required
 from security import authenticate, identity
+from flask_cors import CORS
 
 from datetime import timedelta
 from resources.user import UserRegister, User
 from resources.bilag import BilagList, CreateBilag, UserBilag, Upload, Download
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'secret'
 api = Api(app)
 
